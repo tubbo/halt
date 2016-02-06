@@ -1,5 +1,4 @@
-require "halt/version"
+require "halt/engine"
 
 module Halt
-  # Your code goes here...
 end
