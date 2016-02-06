@@ -5,6 +5,9 @@ module Halt
   #
   # @api private
   class Error
+    MESSAGES = 'messages'
+    DESCRIPTIONS = 'descriptions'
+
     delegate :to_json, to: :attributes
 
     # @param [Symbol] status
@@ -20,12 +23,12 @@ module Halt
 
     # @return [String]
     def message
-      @message ||= translate 'messages'
+      @message ||= translate MESSAGES
     end
 
     # @return [String]
     def description
-      @description ||= translate 'descriptions'
+      @description ||= translate DESCRIPTIONS
     end
 
     # @return [Hash]
