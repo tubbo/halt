@@ -5,10 +5,16 @@ module Halt
   #
   # @api private
   class Error
-    MESSAGES = 'messages'
-    DESCRIPTIONS = 'descriptions'
+    MESSAGES = 'halt.errors.messages'
+    DESCRIPTIONS = 'halt.errors.descriptions'
 
     delegate :to_json, to: :attributes
+
+    attr_accessor :status
+    attr_accessor :exception
+
+    attr_writer :message
+    attr_writer :description
 
     # @param [Symbol] status
     # @keyword [Exception] exception
@@ -44,8 +50,8 @@ module Halt
 
     # @private
     # @param [String] key
-    def translate(key)
-      I18n.translate key, scope: "halt.errors.#{key}"
+    def translate(scope)
+      I18n.translate status, scope: scope
     end
   end
 end

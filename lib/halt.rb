@@ -1,9 +1,10 @@
 require 'active_support/concern'
+require 'active_support/core_ext/object'
 require 'json'
 require 'i18n'
 
 require 'halt/version'
-require 'halt/engine'
+require 'halt/engine' if defined? Rails
 require 'halt/error'
 
 # An extension to +ActionController+ which enables standard error

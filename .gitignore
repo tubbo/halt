@@ -9,3 +9,4 @@ spec/dummy/.sass-cache
 spec/examples.txt
 Gemfile.lock
 vendor/
+tags

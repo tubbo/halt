@@ -1,17 +1,6 @@
 require 'spec_helper'
+require 'action_controller'
 
 RSpec.describe Halt do
-  class Controller < ActionController::Base
-    include Halt
-
-    halt StandardError
-
-    def index
-      raise StandardError, "Error message"
-    end
-  end
-
-  subject { Controller.new }
-
-  it 'renders error object'
+  it 'extends action_controller to provide a standard erroring interface'
 end
