@@ -2,6 +2,7 @@ require 'bundler/setup'
 require 'rspec/core/rake_task'
 require 'rubocop/rake_task'
 require 'yard'
+require 'travis/release/task'
 
 RSpec::Core::RakeTask.new :test
 
