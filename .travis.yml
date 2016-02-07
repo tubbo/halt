@@ -1,4 +1,16 @@
 language: ruby
 rvm:
-  - 2.3.0
+- 2.3.0
 before_install: gem install bundler -v 1.11.2
+addons:
+  code_climate:
+    repo_token:
+      secure: S/pEX6D4Egp05FnqtQ2deCHM3wQ3G+xyv5gYoaDRLF2LkFBXA9fV7X+OFfg+ybFxaD9xQfdWhstQhUgz2qmEjujf9q+gjwECfbtPXtLK0/Sg/TOl0qJhQPRz/8Ww4qV0F8QD59OlQw/20J+7Ta5FLdXNN54dwYn/+7Hv7jiFQHsWByTcMNg+71vW4swhd+8aPO4fL/V4Q5seqZVuFCZFX9EnoqZmS2U8vWbj5aGEVJInEOylKdt3nGjrFY8/g2dibHPTY7dDkL2Xs0zIVAKKxJylLxLixS4HrwDMkNx+n3tuxGguASfY5BtTOMER5bQyGS2V/GWBQVls2+kzbJPLGSC7KYO9pddf/YPZNZsf1pKqkCDq4P+wL9d4E3H+OzQDca2HhppluFqUMfemMRNhUVnnwtqwOuhE/inzvf5n5/ibrMGN7oi7Pvr0jvEoJUqiqh8TYXr81oOUBZcdJs1skt5LuL9FfP0Bkcr8D5pnAp+/KklO4F9HQGvHs7nSZy41p3wepooxaDIJwxOWwa0wtVTQ1AozzAsbc3NvSQyyvgHyX7XtsRA91dlIWaCfUIty2EgxnUNHFjB2ahBZq4gZ2Cin7/erAYRsdGniy0ItN1nuXhrjhfUEgoyzcsKK1fs7E4AWLotgkvdZtF9DOtjbf4ZxjIdjD8iyw5iDOs1s57U=
+deploy:
+  provider: rubygems
+  api_key:
+    secure: uWgUbc6bOwkfxh9t/V4Epw7OHvA69A3EGlVV63DX3kX1l8MaNqbxo3BO1RJHNSZH8TgBZdUosWpBur3SI8Fi+FL22KWaJ/Q4pz0XEqbeq9L6iDa8ww3L6HD9efa0EhrPvju+pIi5wXCk9jCsdnzoo2wzwKapd9fSBoF5u606sU1mlX/n0OCh6/M2+0XhryaLiIAVyyNVRBm4PGveZqdzPrxLijuMvvEwxynSADt2R1LZVqe0xi+oCvIl+KmTWfRyVCffpn7G3kerJzHfgH1lccngDFMLJqqRpWhDSthkH9OwjQh9CYtcnkBayXhTIP7vg8V7ZlOzyvo2T//poXP1AMmggFhd/ISYjm4n93wCucV6tIE0dBNoYHlS16G0Qx+W87fv1g9fwL4ryVh+CgowgoIxMXdvplbSbuFK6aZ9AUeYJ7fZaxMVh664yxeAHrsUarwBUSpZqDK05pxNZnQYjSVbQ4XbiPsKX8Q4ud8iUMJe+8f9wFr0OqYVBZqcv5BlSzoCo5p1DEQ2groEh4vWcFmEfn5O3qFSIoOzDNTlgOqa5tvUO5FPVG7r2AkFY/M5WpwbCH1ndJ28VBydAtlAtgLCxjze9Dk7l0WgOnXd1XQ9btge1xz4lMM78W/25WjBM2Gtpgu8PC2U5K5s2hE7nsk9mKzTm4dbNoNNWmNhKac=
+  gem: halt
+  on:
+    tags: true
+    repo: tubbo/halt
