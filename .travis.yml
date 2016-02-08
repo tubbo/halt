@@ -1,7 +1,10 @@
 language: ruby
 rvm:
-- 2.3.0
+  - 2.3.0
+env:
+  - RAILS_ENV=test
 before_install: gem install bundler -v 1.11.2
+before_script: bin/rake db:migrate
 addons:
   code_climate:
     repo_token:
