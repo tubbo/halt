@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.feature 'Errors' do
+RSpec.feature 'Controller Integration' do
   scenario 'rescue exceptions by rendering error page' do
     visit '/posts/0'
 
