@@ -5,8 +5,8 @@ module Halt
   #
   # @api private
   class Error
-    MESSAGES = 'halt.errors.messages'
-    DESCRIPTIONS = 'halt.errors.descriptions'
+    MESSAGES = 'halt.errors.messages'.freeze
+    DESCRIPTIONS = 'halt.errors.descriptions'.freeze
 
     delegate :to_json, to: :attributes
     delegate :message, to: :exception, prefix: true, allow_nil: true

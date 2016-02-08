@@ -40,7 +40,7 @@ module Halt
     respond_to do |format|
       format.html { render 'error', status: @error.status, error: @error }
       format.json { render json: @error, status: @error.status }
-    end and return
+    end && return
   end
 
   private
