@@ -2,6 +2,7 @@ language: ruby
 rvm:
   - 2.3.0
 cache: bundler
+sudo: false
 env:
   - RAILS_ENV=test
 before_install: gem install bundler -v 1.11.2
