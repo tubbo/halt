@@ -30,6 +30,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rails', '~> 4.2'
   spec.add_development_dependency 'sqlite3', '~> 1'
   spec.add_development_dependency 'travis-release', '~> 0'
+  spec.add_development_dependency 'codeclimate-test-reporter', '~> 0'
 
   spec.add_dependency 'actionpack', '~> 4'
 end
