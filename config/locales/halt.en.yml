@@ -1,7 +1,0 @@
-en:
-  halt:
-    errors:
-      messages:
-        not_found: File Not Found
-      descriptions:
-        not_found: The file or resource you requested could not be found.

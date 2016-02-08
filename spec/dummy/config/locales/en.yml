@@ -20,11 +20,3 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  halt:
-    errors:
-      messages:
-        not_found: File Not Found
-        server_error: Internal Server Error
-      descriptions:
-        not_found: The file or resource you requested could not be found.
-        server_error: The server encountered an error and could not complete your request.

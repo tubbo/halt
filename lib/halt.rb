@@ -3,7 +3,7 @@ require 'json'
 require 'i18n'
 
 require 'halt/version'
-require 'halt/engine' if defined? Rails
+require 'halt/engine'
 require 'halt/error'
 
 # An extension to +ActionController+ which enables standard error

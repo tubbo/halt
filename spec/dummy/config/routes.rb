@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
+  resources :posts do
+    collection do
+      get :forbidden
+    end
+  end
 
-  resources :posts
-  mount Halt::Engine => "/halt"
+  root to: 'posts#index'
 end

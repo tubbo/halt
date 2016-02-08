@@ -9,6 +9,7 @@ module Halt
     DESCRIPTIONS = 'halt.errors.descriptions'
 
     delegate :to_json, to: :attributes
+    delegate :message, to: :exception, prefix: true, allow_nil: true
 
     attr_accessor :status
     attr_accessor :exception
@@ -23,7 +24,7 @@ module Halt
     def initialize(status, exception: nil, message: nil, description: nil)
       @status = status
       @exception = exception
-      @message = message || exception.message
+      @message = message
       @description = description
     end
 

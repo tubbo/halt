@@ -2,10 +2,9 @@ require 'spec_helper'
 
 module Halt
   RSpec.describe Error do
-    let(:message) { 'There was an error' }
     let(:description) { I18n.t :server_error, scope: Error::DESCRIPTIONS }
     let(:translation) { I18n.t :server_error, scope: Error::MESSAGES }
-    let(:exception) { StandardError.new message }
+    let(:exception) { StandardError.new 'Standard Error' }
     subject { described_class.new :server_error, exception: exception }
 
     before do
@@ -18,7 +17,7 @@ module Halt
     end
 
     it 'uses exception for message' do
-      expect(subject.message).to eq message
+      expect(subject.message).to eq 'Internal Server Error'
       expect(subject.message).not_to match 'translation missing'
     end
 
@@ -29,7 +28,6 @@ module Halt
 
     it 'allows message to be translated' do
       subject.message = nil
-      expect(subject.message).not_to eq message
       expect(subject.message).not_to be_blank
       expect(subject.message).to eq translation
     end

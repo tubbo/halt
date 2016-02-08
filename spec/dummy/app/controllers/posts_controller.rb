@@ -45,6 +45,10 @@ class PostsController < ApplicationController
     redirect_to posts_url, notice: 'Post was successfully destroyed.'
   end
 
+  def forbidden
+    halt :forbidden
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post

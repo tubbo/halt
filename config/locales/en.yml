@@ -4,6 +4,8 @@ en:
       messages:
         not_found: File Not Found
         server_error: Internal Server Error
+        forbidden: Forbidden
       descriptions:
         not_found: The file or resource you requested could not be found.
         server_error: The server encountered an error and could not complete your request.
+        forbidden: No one has access to view this page.
