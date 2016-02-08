@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['tubbo@psychedeli.ca']
 
   spec.summary       = 'Standard error handling for Rails applications.'
-  spec.description   = "#{spec.summary} Inspired by a little method in Sinatra.."
+  spec.description   = "#{spec.summary} Inspired by a little method in Sinatra."
   spec.homepage      = 'https://github.com/tubbo/halt'
   spec.license       = 'MIT'
 

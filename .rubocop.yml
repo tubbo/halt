@@ -1,0 +1,8 @@
+Metrics/LineLength:
+  Exclude:
+    - 'spec/**/*'
+    - 'bin/**/*'
+
+Style/Documentation:
+  Exclude:
+    - 'spec/**/*'
