@@ -32,5 +32,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'travis-release', '~> 0'
   spec.add_development_dependency 'codeclimate-test-reporter', '~> 0'
 
-  spec.add_dependency 'actionpack', '~> 4'
+  spec.add_dependency 'actionpack'
 end
