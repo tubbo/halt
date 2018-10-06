@@ -28,7 +28,7 @@ Include `Halt` in your `ApplicationController`, and use the `halt` macro
 to rescue from exceptions.
 
 ```ruby
-class ApplicatioNController < ActionController::Base
+class ApplicationController < ActionController::Base
   include Halt
 
   halt ActiveRecord::RecordNotFound, with: :not_found
