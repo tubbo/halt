@@ -17,23 +17,29 @@ module Halt
     end
 
     test 'uses exception for message' do
-      assert_equal 'Internal Server Error', @error.message
+      assert_equal @message, @error.message
     end
 
     test 'uses i18n for description' do
       assert_equal @description, @error.description
     end
 
-    test 'allows message to be translated' do
+    test 'translates message when not supplied' do
       @error.message = nil
 
-      assert_equal @translation, @error.message
+      assert_equal @message, @error.message
     end
 
     test 'allows description to be overwritten' do
       @error.description = 'custom error text'
 
       assert_equal 'custom error text', @error.description
+    end
+
+    test 'overwrite message' do
+      @error.message = 'custom message'
+
+      assert_equal 'custom message', @error.message
     end
   end
 end

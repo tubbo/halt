@@ -40,13 +40,14 @@ module Halt
     respond_to do |format|
       format.html { render 'error', status: @error.status, error: @error }
       format.json { render json: @error, status: @error.status }
+      format.all  { head @error.status }
     end && return
   end
 
   private
 
   def _handle_exception(exception)
-    Rails.logger.debug exception.message
-    halt halted[exception.class], exception: exception
+    Rails.logger.debug exception.message if Rails.configuration.halt.verbose
+    halt self.class.halted[exception.class], exception: exception
   end
 end
