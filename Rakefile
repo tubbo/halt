@@ -1,21 +1,27 @@
-require 'bundler/setup'
-require 'rspec/core/rake_task'
-require 'rubocop/rake_task'
-require 'yard'
-require 'travis/release/task'
+begin
+  require 'bundler/setup'
+rescue LoadError
+  puts 'You must `gem install bundler` and `bundle install` to run rake tasks'
+end
 
-RSpec::Core::RakeTask.new :test
+require 'rdoc/task'
 
-RuboCop::RakeTask.new :lint
+RDoc::Task.new(:rdoc) do |rdoc|
+  rdoc.rdoc_dir = 'rdoc'
+  rdoc.title    = 'Halt'
+  rdoc.options << '--line-numbers'
+  rdoc.rdoc_files.include('README.md')
+  rdoc.rdoc_files.include('lib/**/*.rb')
+end
 
-YARD::Rake::YardocTask.new :doc
+require 'bundler/gem_tasks'
 
-APP_RAKEFILE = File.expand_path('../spec/dummy/Rakefile', __FILE__)
-load 'rails/tasks/engine.rake'
-load 'rails/tasks/statistics.rake'
+require 'rake/testtask'
 
-Bundler::GemHelper.install_tasks
+Rake::TestTask.new(:test) do |t|
+  t.libs << 'test'
+  t.pattern = 'test/**/*_test.rb'
+  t.verbose = false
+end
 
-Travis::Release::Task.new
-
-task default: %w(test build doc)
+task default: :test

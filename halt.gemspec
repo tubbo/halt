@@ -21,16 +21,13 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_development_dependency 'bundler', '~> 1.11'
-  spec.add_development_dependency 'rake', '~> 10.0'
-  spec.add_development_dependency 'rspec-rails', '~> 3'
-  spec.add_development_dependency 'rubocop', '~> 0.49.0'
-  spec.add_development_dependency 'yard', '~> 0.9.11'
-  spec.add_development_dependency 'capybara', '~> 2'
-  spec.add_development_dependency 'rails', '~> 4.2'
-  spec.add_development_dependency 'sqlite3', '~> 1'
-  spec.add_development_dependency 'travis-release', '~> 0'
-  spec.add_development_dependency 'codeclimate-test-reporter', '~> 0'
+  spec.add_development_dependency 'bundler'
+  spec.add_development_dependency 'rubocop'
+  spec.add_development_dependency 'yard'
+  spec.add_development_dependency 'capybara'
+  spec.add_development_dependency 'rails', '~> 5.2'
+  spec.add_development_dependency 'sqlite3'
+  spec.add_development_dependency 'travis-release'
 
   spec.add_dependency 'actionpack'
 end
