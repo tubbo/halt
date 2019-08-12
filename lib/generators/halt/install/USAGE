@@ -1,0 +1,13 @@
+Description:
+    Generate configuration for Halt and remove static HTML files.
+
+Example:
+    rails generate halt:install
+
+    This will create:
+        config/initializers/halt.rb
+
+    This will remove:
+        public/404.html
+        public/422.html
+        public/500.html

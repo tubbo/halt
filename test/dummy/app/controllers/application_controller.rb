@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   end
 
   def halted
-    halt :server_error
+    halt :internal_server_error
   end
 
   def missing

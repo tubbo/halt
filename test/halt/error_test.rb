@@ -10,10 +10,10 @@ module Halt
         )
       ]
 
-      @message = I18n.t :server_error, scope: Error::MESSAGES
-      @description = I18n.t :server_error, scope: Error::DESCRIPTIONS
+      @message = I18n.t :internal_server_error, scope: Error::MESSAGES
+      @description = I18n.t :internal_server_error, scope: Error::DESCRIPTIONS
       @exception = StandardError.new 'Standard Error'
-      @error = Error.new(:server_error, exception: @exception)
+      @error = Error.new(:internal_server_error, exception: @exception)
     end
 
     test 'uses exception for message' do

@@ -18,7 +18,43 @@ module Halt
       get missing_path
 
       assert_response :not_found
-      assert_includes response.body, 'File Not Found'
+      assert_includes response.body, 'Not Found'
+    end
+
+    test 'internal server error response' do
+      message = I18n.t(:internal_server_error, scope: %i[halt errors messages])
+
+      get halt.internal_server_error_path
+
+      assert_includes response.body, message
+      assert_equal 500, response.status
+    end
+
+    test 'unprocessable entity response' do
+      message = I18n.t(:unprocessable_entity, scope: %i[halt errors messages])
+
+      get halt.unprocessable_entity_path
+
+      assert_includes response.body, message
+      assert_equal 422, response.status
+    end
+
+    test 'not found response' do
+      message = I18n.t(:not_found, scope: %i[halt errors messages])
+
+      get halt.not_found_path
+
+      assert_includes response.body, message
+      assert_equal 404, response.status
+    end
+
+    test 'add custom errors to config' do
+      message = I18n.t(:unauthorized, scope: %i[halt errors messages])
+
+      get halt.unauthorized_path
+
+      assert_includes response.body, message
+      assert_equal 401, response.status
     end
   end
 end

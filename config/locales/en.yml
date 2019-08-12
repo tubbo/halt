@@ -1,11 +1,81 @@
 en:
   halt:
     errors:
-      messages:
-        not_found: File Not Found
-        server_error: Internal Server Error
-        forbidden: Forbidden
       descriptions:
+        bad_request: The request cannot be fulfilled due to malformed syntax.
+        unauthorized: You must be logged in to view this resource.
+        payment_required: You must purchase access to view this resource.
+        forbidden: The resource you requested cannot be viewed at this time.
         not_found: The file or resource you requested could not be found.
-        server_error: The server encountered an error and could not complete your request.
-        forbidden: No one has access to view this page.
+        method_not_allowed: The HTTP method used in this request is not available for this resource.
+        not_acceptable: The resource identified by the request is only capable of generating response entities which have content characteristics not acceptable according to the accept headers sent in the request.
+        proxy_authentication_required:
+        request_timeout: The request took too long to complete.
+        conflict: The request could not be completed due to a conflict with the current state of the resource.
+        gone: The requested resource is no longer available.
+        length_required: Please specify a Content-Length header in your request.
+        precondition_failed: A header specifying a precondition for this request has failed.
+        payload_too_large: Request cannot be completed because its payload is too large.
+        uri_too_long: The URL for this request is too long.
+        unsupported_media_type: The entity of this request is in a format not supported by the requested resource for the requested method.
+        range_not_satisfiable: None of the ranges in the request's Range header field overlap the current extent of the selected resource or that the set of ranges requested has been rejected due to invalid ranges or an excessive request of small or overlapping ranges.
+        expectation_failed: The expectation given in the request's Expect header field could not be met by at least one of the inbound servers.
+        misdirected_request: The request was directed at a server that is not able to produce a response. This can be sent by a server that is not configured to produce responses for the combination of scheme and authority that are included in the request URI.
+        unprocessable_entity: Maybe you tried to change something you didn't have access to.
+        locked: The source or destination resource of a method is locked.
+        failed_dependency: The method could not be performed on the resource because the requested action depended on another action and that action failed.
+        upgrade_required: This service requires a higher version of HTTP.
+        precondition_required: 'This request is required to be conditional; try using "If-Match".'
+        too_many_requests: You are sending too many requests in too short a time frame. Please wait to make future requests to this server.
+        request_header_fields_too_large: The contents of one of your HTTP headers are too large.
+        unavailable_for_legal_reasons: The server is denying access to the resource as a consequence of a legal demand.
+        internal_server_error: The server encountered an error and could not complete your request.
+        not_implemented: The functionality needed to fulfill this request has not yet been implemented.
+        bad_gateway: The upstream server used to fulfill this request has failed.
+        service_unavailable: The server is either handling too many requests at once and cannot complete yours at the moment, or requires maintenence and is down for a predetermined length of time.
+        gateway_timeout: The server, while acting as a gateway or proxy, did not receive a timely response from the upstream server specified by the URI (e.g. HTTP, FTP, LDAP) or some other auxiliary server (e.g. DNS) it needed to access in attempting to complete the request.
+        http_version_not_supported: Your browser cannot view this website because it doesn't support the correct version of HTTP.
+        variant_also_negotiates: Variant Also Negotiates
+        insufficient_storage: The server cannot save your file because there is insufficient disk space in its storage location.
+        loop_detected: An infinite loop has been detected and the request has terminated.
+        not_extended: The policy for accessing the resource has not been met in the request. The server should send back all the information necessary for the client to issue an extended request.
+        network_authentication_required: The client needs to authenticate to gain network access.
+      messages:
+        bad_request: Bad Request
+        unauthorized: Unauthorized
+        payment_required: Payment Required
+        forbidden: Forbidden
+        not_found: Not Found
+        method_not_allowed: Method Not Allowed
+        not_acceptable: Not Acceptable
+        proxy_authentication_required: Proxy Authentication Required
+        request_timeout: Request Timeout
+        conflict: Conflict
+        gone: Gone
+        length_required: Length Required
+        precondition_failed: Precondition Failed
+        payload_too_large: Payload Too Large
+        uri_too_long: URI Too Long
+        unsupported_media_type: Unsupported Media Type
+        range_not_satisfiable: Range Not Satisfiable
+        expectation_failed: Expectation Failed
+        misdirected_request: Misdirected Request
+        unprocessable_entity: The change you wanted was rejected
+        locked: Locked
+        failed_dependency: Failed Dependency
+        upgrade_required: Upgrade Required
+        precondition_required: Precondition Required
+        too_many_requests: Too Many Requests
+        request_header_fields_too_large: Request Header Fields Too Large
+        unavailable_for_legal_reasons: Unavailable for Legal Reasons
+        internal_server_error: Internal Server Error
+        not_implemented: Not Implemented
+        bad_gateway: Bad Gateway
+        service_unavailable: Service Unavailable
+        gateway_timeout: Gateway Timeout
+        http_version_not_supported: HTTP Version Not Supported
+        variant_also_negotiates: Variant Also Negotiates
+        insufficient_storage: Insufficient Storage`
+        loop_detected: Loop Detected
+        not_extended: Not Extended
+        network_authentication_required: Network Authentication Required

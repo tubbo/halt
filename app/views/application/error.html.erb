@@ -1,4 +1,4 @@
-<div class="error <%= @error.status %>" data-message="<%= @error.exception_message %>">
+<div class="error error--<%= @error.status %>">
   <h1><%= @error.message %></h1>
   <%= simple_format @error.description %>
 </div>

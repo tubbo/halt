@@ -5,6 +5,7 @@ require 'i18n'
 require 'halt/version'
 require 'halt/engine'
 require 'halt/error'
+require 'halt/status'
 
 # An extension to +ActionController+ which enables standard error
 # handling using +ActionView+ and translations.

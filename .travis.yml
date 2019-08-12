@@ -7,10 +7,7 @@ env:
   - RAILS_ENV=test
 before_install: gem install bundler -v 1.11.2
 before_script: bin/rake db:migrate
-addons:
-  code_climate:
-    repo_token:
-      secure: S/pEX6D4Egp05FnqtQ2deCHM3wQ3G+xyv5gYoaDRLF2LkFBXA9fV7X+OFfg+ybFxaD9xQfdWhstQhUgz2qmEjujf9q+gjwECfbtPXtLK0/Sg/TOl0qJhQPRz/8Ww4qV0F8QD59OlQw/20J+7Ta5FLdXNN54dwYn/+7Hv7jiFQHsWByTcMNg+71vW4swhd+8aPO4fL/V4Q5seqZVuFCZFX9EnoqZmS2U8vWbj5aGEVJInEOylKdt3nGjrFY8/g2dibHPTY7dDkL2Xs0zIVAKKxJylLxLixS4HrwDMkNx+n3tuxGguASfY5BtTOMER5bQyGS2V/GWBQVls2+kzbJPLGSC7KYO9pddf/YPZNZsf1pKqkCDq4P+wL9d4E3H+OzQDca2HhppluFqUMfemMRNhUVnnwtqwOuhE/inzvf5n5/ibrMGN7oi7Pvr0jvEoJUqiqh8TYXr81oOUBZcdJs1skt5LuL9FfP0Bkcr8D5pnAp+/KklO4F9HQGvHs7nSZy41p3wepooxaDIJwxOWwa0wtVTQ1AozzAsbc3NvSQyyvgHyX7XtsRA91dlIWaCfUIty2EgxnUNHFjB2ahBZq4gZ2Cin7/erAYRsdGniy0ItN1nuXhrjhfUEgoyzcsKK1fs7E4AWLotgkvdZtF9DOtjbf4ZxjIdjD8iyw5iDOs1s57U=
+script: bin/test
 deploy:
   provider: rubygems
   api_key:
